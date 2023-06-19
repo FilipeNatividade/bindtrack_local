@@ -31,6 +31,7 @@ export const ListsMenu = styled.li`
   cursor: pointer;
   a,
   p {
+    letter-spacing: 0.8px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -38,5 +39,6 @@ export const ListsMenu = styled.li`
   }
   p {
     color: #c2c2c2;
+    
   }
 `;

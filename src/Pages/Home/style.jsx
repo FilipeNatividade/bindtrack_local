@@ -6,7 +6,8 @@ export const Container = styled.div`
 
 export const SubContainer = styled.div`
   position: relative;
-  padding: 50px 100px calc(40vh + 50px);
+  padding: ${({ openFooter }) =>
+    openFooter ? '50px 100px calc(40vh + 50px)' : '50px 100px'};
   h1 {
     margin-bottom: 50px;
     display: flex;
@@ -30,12 +31,23 @@ export const FooterTable = styled.div`
   background-color: #fff;
   border-top: 2px solid #c2c2c2;
   position: fixed;
-  padding: 25px 100px;
   z-index: 2;
   bottom: 0;
   left: 0;
-  height: 40vh;
-  overflow: auto;
+  height: ${({ openFooter }) => (openFooter ? '40vh' : '0')};
   width: 100%;
-  display: inline-block;
+  .tableBox {
+    display: inline-block;
+    overflow: auto;
+    width: 100%;
+    padding: ${({ openFooter }) => (openFooter ? ' 25px 100px' : '0')};
+  }
+  .collapseButton {
+    position: absolute;
+    margin-top: -28px;
+    right: 0;
+    background-color: #1976d2;
+    color: #fff;
+    padding: 0 5px;
+  }
 `;
