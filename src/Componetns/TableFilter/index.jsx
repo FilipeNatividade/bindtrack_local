@@ -20,6 +20,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import styled from 'styled-components';
 import WifiTetheringIcon from '@mui/icons-material/WifiTethering';
 import WifiTetheringOffIcon from '@mui/icons-material/WifiTetheringOff';
+import SettingsInputAntennaIcon from '@mui/icons-material/SettingsInputAntenna';
+import QueryBuilderIcon from '@mui/icons-material/QueryBuilder';
 
 const FormStyle = styled.form`
   margin-top: 10px;
@@ -39,28 +41,28 @@ const createData = (status, id, nome, rede, boot, conect, detalhe) => {
       {
         id: '0201000016',
         nome: '( -- Desconhecido -- )',
-        sinal: 'icone',
-        tempo: 'icone',
+        sinal: '-95dBm',
+        tempo: '57m',
       },
       {
         id: '0201000016',
         nome: '( -- Desconhecido -- )',
-        sinal: 'icone',
-        tempo: 'icone',
+        sinal: '78dBm',
+        tempo: '18m',
       },
     ],
     receptorProximo: [
       {
         id: '0201000016',
         nome: '( -- Desconhecido -- )',
-        sinal: 'icone',
-        tempo: 'icone',
+        sinal: '-88dBm',
+        tempo: '19s',
       },
       {
         id: '0201000016',
         nome: '( -- Desconhecido -- )',
-        sinal: 'icone',
-        tempo: 'icone',
+        sinal: '-104dBm',
+        tempo: '50m',
       },
     ],
   };
@@ -120,8 +122,16 @@ const Row = (props) => {
                       <TableCell component="th" scope="row" align="center">
                         {historyRow.nome}
                       </TableCell>
-                      <TableCell align="center">{historyRow.sinal}</TableCell>
-                      <TableCell align="center">{historyRow.tempo}</TableCell>
+                      <TableCell align="center">
+                        <p title={historyRow.sinal}>
+                          <SettingsInputAntennaIcon />
+                        </p>
+                      </TableCell>
+                      <TableCell align="center">
+                        <p title={historyRow.tempo}>
+                          <QueryBuilderIcon />
+                        </p>
+                      </TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
@@ -150,8 +160,16 @@ const Row = (props) => {
                       <TableCell component="th" scope="row" align="center">
                         {historyRow.nome}
                       </TableCell>
-                      <TableCell align="center">{historyRow.sinal}</TableCell>
-                      <TableCell align="center">{historyRow.tempo}</TableCell>
+                      <TableCell align="center">
+                        <p title={historyRow.sinal}>
+                          <SettingsInputAntennaIcon />
+                        </p>
+                      </TableCell>
+                      <TableCell align="center">
+                        <p title={historyRow.tempo}>
+                          <QueryBuilderIcon />
+                        </p>
+                      </TableCell>
                     </TableRow>
                   ))}
                 </TableBody>

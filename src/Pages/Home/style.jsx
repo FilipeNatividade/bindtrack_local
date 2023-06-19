@@ -44,7 +44,7 @@ export const FooterTable = styled.div`
   }
   .collapseButton {
     position: absolute;
-    margin-top: -28px;
+    margin-top: -29px;
     right: 0;
     background-color: #1976d2;
     color: #fff;

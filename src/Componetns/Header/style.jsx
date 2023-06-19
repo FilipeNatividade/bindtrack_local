@@ -9,10 +9,6 @@ export const HeaderContain = styled.header`
   padding: 0 100px;
   width: 100%;
   justify-content: space-between;
-  h1 {
-    margin-left: 50px;
-  }
-  
 `;
 
 export const DropdownBox = styled.div`
