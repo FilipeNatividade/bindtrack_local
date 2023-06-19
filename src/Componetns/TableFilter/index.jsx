@@ -41,23 +41,11 @@ const createData = (status, id, nome, rede, boot, conect, detalhe) => {
       {
         id: '0201000016',
         nome: '( -- Desconhecido -- )',
-        sinal: '-95dBm',
-        tempo: '57m',
-      },
-      {
-        id: '0201000016',
-        nome: '( -- Desconhecido -- )',
         sinal: '78dBm',
         tempo: '18m',
       },
     ],
     receptorProximo: [
-      {
-        id: '0201000016',
-        nome: '( -- Desconhecido -- )',
-        sinal: '-88dBm',
-        tempo: '19s',
-      },
       {
         id: '0201000016',
         nome: '( -- Desconhecido -- )',
